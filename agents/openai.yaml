@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analytical Presentations"
+  short_description: "Turn executive data slides into evidence-backed decisions"
+  default_prompt: "Review or create this analytical PowerPoint for a C-suite audience. Start with an Executive Summary, build a ghost-deck storyline with insight-led titles, verify comparisons and scope footers, add business recommendations, and inspect the final slides."

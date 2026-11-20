@@ -31,7 +31,14 @@ This skill is an original, client-agnostic synthesis of the user's requirements 
 - https://www.storytellingwithdata.com/blog/simplifying-a-gantt-chart
 - Reduce clutter, use intentional highlights, focus the viewer's attention on what matters. Use examples as inspiration, not a mandatory visual template.
 
-## 6. Technical PowerPoint generation
+## 6. Microsoft analytics and slide-workflow patterns (concepts, not product code)
+
+- Public Microsoft runbook for source-grounded executive business reviews and KPI reconciliation: https://github.com/microsoft/ai-agent-runbooks/tree/main/01-scenarios/Insights-Analyst-Cowork-Agent
+- Public `brand-template-enforcer` reference for actual master/template use: https://github.com/microsoft/cat-agent-skills/tree/main/submissions/brand-template-enforcer
+- Public Microsoft PowerPoint sales-skills feature descriptions (inspiration for slide alternatives, not an open-source copy of the proprietary Sales plugin): https://support.microsoft.com/en-us/powerpoint/copilot/use-sales-skills-in-powerpoint-and-cowork
+- Adapt only the *ideas* of explicit source binding, KPI parity, alternative slide structures and verified brand template selection. No Microsoft implementation text, images, model instructions or client assets have been copied into this skill. If any third-party code or documentation is copied later, re-check the relevant file license and preserve required notices.
+
+## 7. Technical PowerPoint generation
 
 - Anthropic public PPTX skill: https://github.com/anthropics/skills/tree/main/skills/pptx
 - Technical creation/editing must follow the actual PPTX engine's environment-specific instructions; this skill covers the content and review layer instead.

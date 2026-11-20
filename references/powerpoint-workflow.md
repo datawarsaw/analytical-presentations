@@ -8,7 +8,7 @@ Load when an agent needs to create, edit, or review an actual PowerPoint deck. T
 2. Prefer a separate copy or save-as output for substantive edits, unless the user explicitly directs in-place editing.
 3. Use the technical PowerPoint skill or local MCP's instructions for the *current* implementation. Check what the active connection actually supports instead of assuming all listed operations are available.
 4. If using the connected `Breitling_PowerPoint` MCP, **activate the correct presentation first** with `ppt_activate_presentation` before any inspection or edit. Do not assume the currently open Windows PowerPoint window is the intended target.
-5. Read the deck layout, masters, theme, current slide order, existing chart data, text and notes before making stylistic changes. Preserve approved brand features.
+5. Read the deck layout, masters, theme, current slide order, existing chart data, text and notes before making stylistic changes. Preserve approved brand features. For **new branded decks**, select the user's explicitly named approved template first; otherwise use the client's authorized profile and matching approved template. Resolve the *actual PPTX/POTX binary and its master/layouts*, not just screenshot/text approximation. For an existing deck, preserve its current approved master by default. If a required template is inaccessible, disclose the block; do not fabricate brand authority or silently fall back to an unbranded file.
 6. Prepare a storyboard/diff plan: original title -> proposed action title -> evidence -> commentary -> mandatory scope footer -> notes/appendix.
 
 ## Editing through live PowerPoint MCP
@@ -34,9 +34,9 @@ When PowerPoint MCP is unavailable or a brand-new deck is requested:
 
 1. Establish slide's current intended purpose.
 2. Confirm correct metrics, baseline, data provenance and footer scope.
-3. Write the action title and evidence mapping.
+3. For a source refresh, bind the approved source and reconcile the new chart/table values before drafting an updated action title; do not mix old-period commentary with new data. Otherwise, write the action title and evidence mapping from the verified exhibit.
 4. Decide whether to modify a chart, commentary, annotations, or just visual hierarchy.
-5. Edit only the authorized elements; avoid destructive global theme changes without approval.
+5. Edit only the authorized elements; avoid destructive global theme changes without approval. For requested alternatives, keep the source slide and place variants in separately identifiable duplicates or copies, not by overwriting the original.
 6. Add/verify notes for deeper interpretation and remaining limitations.
 7. Render/preview the slide, inspect text overflow, label placement, chart consistency, source and footer legibility.
 8. Re-read the edited values and notes; correct until the claim matches evidence.

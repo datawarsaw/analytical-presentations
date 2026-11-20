@@ -32,6 +32,13 @@ client-presentation-profile/
 
 `footer-examples.md`: authentic **formats** for source, period, scope, filters, exclusions and refresh date. Examples should show layout and label conventions, **not hard-code filters** as universal defaults.
 
+### Template selection and preservation
+
+- **Existing authorized deck**: its current approved master/theme takes precedence; never apply a different template during a content-only refresh.
+- **New branded deck**: use the template explicitly selected by the user; otherwise resolve the best-fitting *approved* source from the private profile. Confirm the real binary, expected layouts and placeholder mapping, and its use permissions before composing slides.
+- If multiple equally applicable approved templates exist, flag the choice rather than guessing. If a required branded template cannot be obtained, do not invent its logo, fonts, theme or slide master; report the missing asset or obtain an explicit unbranded exception.
+- Copy the template to the target output. Preserve masters, notes, charts, and editability; never overwrite the canonical original. Applying a profile means using approved source assets where available, not painting a lookalike from a screenshot.
+
 Do not silently copy clients' fonts, logos, templates or confidential examples into this generic skill or public repositories.
 
 ## Rule precedence

@@ -1,6 +1,6 @@
 ---
 name: analytical-presentations
-description: Create, revise, and review executive and C-suite analytical presentations, especially PowerPoint decks built or edited with PowerPoint MCP, PPTX tools, or PptxGenJS. Use for business-performance, customer, commercial, strategy, or KPI decks when the goal is a defensible decision or recommendation rather than a data dump. Enforce an executive summary, evidence-based action titles, ghost-deck narrative, one insight per slide, meaningful comparisons, analytical commentary, precise scope/filter/exclusion footers, speaker-note/appendix depth, and narrative/visual QA. Compose with the available technical PowerPoint skill or connector; this skill is not a PPTX file engine.
+description: Create, revise, refresh, reimagine, and review executive and C-suite analytical presentations, especially PowerPoint decks built or edited with PowerPoint MCP, PPTX tools, or PptxGenJS. Use for business-performance, customer, commercial, strategy, or KPI decks; for slide alternatives, recurring KPI refreshes, evidence checks, and executive reviews when the goal is a defensible decision or recommendation rather than a data dump. Enforce an executive summary, evidence-based action titles, ghost-deck narrative, one insight per slide, meaningful comparisons, analytical commentary, precise scope/filter/exclusion footers, speaker-note/appendix depth, and narrative/visual QA. Compose with the available technical PowerPoint skill or connector; this skill is not a PPTX file engine.
 ---
 
 # Analytical Presentations
@@ -22,6 +22,18 @@ Build decision-ready, C-suite-grade presentations from evidence. This is a **con
 11. **Evidence integrity.** Verify numerical claims, units, % vs percentage points, time windows, denominator, baselines, exclusions and chart scales. Never invent data, causal explanations, benchmarks, owners or economic impact.
 12. **Visual and narrative QA.** Render/inspect every modified slide, verify that the chart proves the title, notes and footers survive, and that the Executive Summary matches the deck. Keep the approved brand template/layout intact.
 
+## Route the task before editing
+
+Select the smallest workflow that matches the request. **Read-only review remains read-only** even when edit tools are available.
+
+- **Create a new deck:** decision brief -> storyboard -> source/comparison checks -> approved template -> implement -> render/QA.
+- **Audit or lightly revise an existing deck:** inspect the original first; preserve its slide order, source bindings, figures and template unless the user explicitly authorizes changes. Return prioritized findings for an audit.
+- **Reimagine a slide:** read [slide-alternatives.md](references/slide-alternatives.md) and propose up to three evidence-preserving information designs before choosing or editing an option. Do not force fabricated drivers.
+- **Refresh KPI data or a recurring review:** read [source-refresh-and-reconciliation.md](references/source-refresh-and-reconciliation.md); bind to the exact authorized source, reconcile charts/text/notes/footers, then re-evaluate action titles and Executive Summary.
+- **Combined refresh and redesign:** source-lock and reconcile first; redesign only using the newly verified values. Never mix old and new source periods inside one slide.
+
+Do not add a Firecrawl, CRM, Power BI, or Microsoft-specific dependency simply because a task fits one route. Use only authorized sources and actually available tools.
+
 ## Workflow
 
 ### 1. Establish the decision brief
@@ -30,7 +42,7 @@ Obtain or infer from supplied context: executive audience, business question, de
 
 ### 2. Create the argument before touching PowerPoint
 
-Draft a concise storyboard: for each slide, specify **action title -> evidence -> interpretation -> implication/action -> caveat/footer**. Start a new deck with the Executive Summary as the first substantive slide; allow a required cover. Write/refine the Executive Summary last as well. Perform the ghost-deck test. For modifying existing decks, preserve slide order unless restructuring was requested; flag gaps and propose targeted fixes.
+Draft a concise storyboard: for each slide, specify **action title -> evidence -> interpretation -> implication/action -> caveat/footer**. Start a new deck with the Executive Summary as the first substantive slide; allow a required cover. Write/refine the Executive Summary last as well. Perform the ghost-deck test. For modifying existing decks, preserve slide order unless restructuring was requested; flag gaps and propose targeted fixes. For a data refresh, establish the source lock and period before changing the argument.
 
 Read [story-architecture.md](references/story-architecture.md) for storyboard and summary examples.
 
@@ -46,11 +58,13 @@ Use a client's **approved style/profile** when one is available; never guess its
 
 Read [slide-design-and-commentary.md](references/slide-design-and-commentary.md). If a client profile is provided, also read [client-profile-contract.md](references/client-profile-contract.md).
 
+For a requested slide redesign, first read [slide-alternatives.md](references/slide-alternatives.md); for an updated/recurring KPI deck, first read [source-refresh-and-reconciliation.md](references/source-refresh-and-reconciliation.md).
+
 For a PowerPoint MCP deck, read [powerpoint-workflow.md](references/powerpoint-workflow.md). For file-based generation or editing, follow the **existing technical PPTX skill and its QA**; do not replace its tooling with these prose instructions.
 
 ### 5. Validate and report
 
-Read [quality-gates.md](references/quality-gates.md). Run evidence, narrative, visual, and file-integrity checks. Preview every changed slide; iterate until there are no material problems. State in the delivery report which slides were changed, key conclusions, remaining unverified inputs and the QA status. Do not claim a deck is checked if only text was inspected.
+Read [quality-gates.md](references/quality-gates.md). Run evidence, narrative, visual, and file-integrity checks. Preview every changed slide; iterate until there are no material problems. State in the delivery report which slides were changed, key conclusions, remaining unverified inputs and the QA status. Do not claim a deck is checked if only text was inspected. For skill changes, use the maintainer regression scenarios in [tests/regression-cases.md](tests/regression-cases.md); these are not a substitute for end-to-end PowerPoint tests.
 
 ## Source and confidentiality boundaries
 
@@ -63,9 +77,12 @@ Read [quality-gates.md](references/quality-gates.md). Run evidence, narrative, v
 ## References
 
 - [story-architecture.md](references/story-architecture.md) - decision brief, Executive Summary, action titles, ghost-deck, storyline.
+- [slide-alternatives.md](references/slide-alternatives.md) - three evidence-preserving ways to reimagine a slide without losing editability.
+- [source-refresh-and-reconciliation.md](references/source-refresh-and-reconciliation.md) - locked source/period, consistent KPI refresh, reconciliations and stop conditions.
 - [comparisons-and-evidence.md](references/comparisons-and-evidence.md) - benchmarks, valid comparisons, directionality, denominator and chart integrity.
 - [slide-design-and-commentary.md](references/slide-design-and-commentary.md) - layout, side commentary, footer vs notes vs appendix.
 - [powerpoint-workflow.md](references/powerpoint-workflow.md) - safe PowerPoint MCP and technical engine integration.
 - [quality-gates.md](references/quality-gates.md) - reproducible reviewer rubric and release checklist.
 - [client-profile-contract.md](references/client-profile-contract.md) - optional private style profile (e.g., a future Breitling profile), not business logic.
 - [inspiration-and-attribution.md](references/inspiration-and-attribution.md) - links to external guidance; original rules here are synthesized, not copied wholesale.
+- [tests/regression-cases.md](tests/regression-cases.md) - maintainer-only behavioral cases and negative probes (not auto-run by the presentation engine).

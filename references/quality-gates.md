@@ -14,6 +14,8 @@ Use for final QA and to diagnose existing decks before a substantial rewrite. A 
 ## Gate 2 - Claim, evidence and comparison
 
 - [ ] Every important claim is supported by its displayed exhibit or an accessible cited source.
+- [ ] For a KPI refresh, the exact authorized source, as-of time, measure definitions, scope and comparison period are locked; no substitute dataset or stale source is silently used.
+- [ ] Refreshed chart series, inline KPIs, calculated deltas, commentary, footers, notes, and Executive Summary reconcile to the same validated data and period.
 - [ ] Comparisons are like-for-like; period, base, cohorts, population, metric definition and currency are aligned.
 - [ ] % vs percentage points, variance directions, units, totals, rounding and targets reconcile.
 - [ ] Claims such as growth, underperformance, causation and ROI are appropriately qualified.
@@ -36,6 +38,8 @@ Use for final QA and to diagnose existing decks before a substantial rewrite. A 
 - [ ] No cropping/overflow, collision, clipped labels, undersized legends or footer overlap.
 - [ ] Chart color and scenario semantics stay consistent; key comparison is visually obvious without relying on color alone.
 - [ ] Native elements remain editable when the source and engine permit it; all referenced images/charts remain correctly linked.
+- [ ] For slide alternatives, the source slide remains intact, each variant preserves metric meaning, and the recommended variant changes information structure rather than colors alone.
+- [ ] For new branded files, the actual approved template/master binary was used; no screenshot-based brand approximation or silent generic fallback.
 
 ## Gate 5 - File safety and delivery
 
@@ -43,6 +47,11 @@ Use for final QA and to diagnose existing decks before a substantial rewrite. A 
 - [ ] Original file protected when needed; save location and file integrity validated by the technical PPTX workflow.
 - [ ] Final Executive Summary refreshed; slide titles and detailed content have no contradictions.
 - [ ] Deliverable includes exact file/link, changed slide list, QA outcome, outstanding assumptions or missing source metadata.
+- [ ] Any unresolved critical source/metric disagreement blocks affected claims; a partial update is not called a fully refreshed deck.
+
+## Maintaining this skill
+
+For behavior changes, run the static entrypoint/reference contract test (`python tests/check_contract.py`) and manually exercise the prompts and negative probes in [tests/regression-cases.md](../tests/regression-cases.md) with a suitable PowerPoint engine. Static checks do **not** demonstrate model behavior, data reconciliation against a real BI source or rendered PPTX integrity.
 
 ## Rubric for audits
 
